@@ -460,7 +460,7 @@ type OutputBuffer struct {
 	buf []byte
 }
 
-// Writes appends b to out's buffered data.
+// Write writes appends b to out's buffered data.
 func (out *OutputBuffer) Write(b []byte) (n int, err error) {
 	out.m.Lock()
 	out.buf = append(out.buf, b...)
